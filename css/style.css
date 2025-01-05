@@ -1,0 +1,369 @@
+:root {
+  /* Primäre und sekundäre Farben */
+  --bs-primary: #1ca9d3;
+  --bs-secondary: #df555c;
+
+  --bs-dark: #313a4a;
+  --bs-dark-light: #5A616E;
+  --bs-light: #fff3e4;
+
+h1 {
+    margin-bottom: 1em;
+
+
+}
+
+#name {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+    color: var(--bs-secondary);
+}
+.navbar-brand {
+    color: var(--bs-secondary);
+    font-weight: 800;
+    font-size: 1.5rem;gibs
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 1em;
+}
+h3 {
+    font-size: 20px;
+    color: var(--bs-secondary);
+}
+body {
+  color: var(--bs-light);
+  width: 100%;
+  height: 100%;
+}
+
+.navbar, .footer {
+  background-color: var(--bs-dark);
+  color: var(--bs-light);
+}
+
+/* Links und Buttons */
+.nav-link {
+    color: var(--bs-light);
+    transition: color 0.3s ease;
+}
+.clight {
+    background-color: var(--bs-dark-light);
+
+}
+.cdark {
+    background-color: var(--bs-dark);
+
+}
+.fullscreen-div {
+ min-height: 100vh;
+}
+}
+.container {
+    position: relative;
+    z-index: 2;
+    padding-top: 7em;
+
+}
+.backgroundPicture {
+    background-image: url('../media/background.jpg'); /* Dein Bild */
+      background-size: cover; /* Das Bild deckt den gesamten Bereich ab */
+      background-position: center center; /* Bild wird zentriert */
+       background-attachment: fixed; /* Das Bild bleibt beim Scrollen fixiert */
+       position: relative; /* Wichtige Positionierung für Überlagerung */
+       min-height: 100vh; /* Die Höhe des Abschnitts ist 100% des Viewports */
+}
+.backgroundPicture::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(49, 58, 74, 0.9);
+    z-index: 1; /* Über dem Bild, aber unter dem Inhalt */
+}
+.nav-link:hover {
+    color: var(--bs-dark-light);
+}
+p {
+    font-size: 1.3rem;
+}
+.aboutMeContainer{
+    margin-top: 5em;
+    width: 100%;
+}
+li {
+    font-size: 1.2rem;
+}
+.aboutMeItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 16em;
+    width: 21em;
+    background-color: var(--bs-dark-light);
+    border-radius: 10px;
+}
+.aboutMeItem p {
+    margin-top: 0.5em;
+}
+#aboutMePicture{
+    border-radius: 10px;
+    margin-right: 2em;
+}
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+}
+
+/* Beispiel für Hover-Effekte */
+.button-highlight:hover {
+  background-color: var(--bs-highlight);
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill p {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: var(--bs-light);
+}
+
+.progress-bar {
+  position: relative;
+  width: 90%;
+  height: 10px;
+  background-color: var(--bs-light); /* Light background */
+  border-radius: 5px;
+
+}
+
+.progress-fill {
+  position: relative;
+  height: 100%;
+  width: 0%;
+  background-color: var(--bs-secondary); /* Primary color */
+  border-radius: 5px;
+  transition: width 1s ease-out;
+}
+
+.progress-fill .circle {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--bs-secondary); /* Secondary color */
+  border-radius: 50%;
+  transform: scale(0); /* Start hidden */
+  transition: transform 0.5s ease-out;
+}
+
+.scroll-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bs-secondary); /* Button Background */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: bounce 1.5s infinite;
+  z-index: 1000; /* Ensure it stays on top */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-button:hover {
+  background-color: var(--bs-primary);
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* Animation for arrow */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.timeline-container {
+    position: relative; /* Container ist jetzt der Bezugspunkt für absolute Positionierung */
+    width: 80%; /* Beispielhafte Breite für den Container */
+    margin: 0 auto; /* Zentrieren */
+    height: 600px; /* Beispielhafte Höhe für den Container */
+    padding: 50px 0;
+}
+
+
+.career-timeline {
+    position: absolute; /* Absolut positioniert innerhalb des Containers */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.timeline {
+    position: absolute;
+    left: 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px; /* Breite der Linie */
+    transform: translateX(-50%); /* Vertikale Ausrichtung in der Mitte */
+    z-index: 1;
+    height: 100%;
+}
+.timeline-right {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px; /* Breite der Linie */
+    transform: translateX(-50%); /* Vertikale Ausrichtung in der Mitte */
+    z-index: 1;
+    height: 100%;
+}
+.timeline-point {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 50px;
+    width: max-content;
+}
+.timeline-point-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 50px;
+    width: max-content;
+}
+.timelinecircle {
+    width: 20px;
+    height: 20px;
+    background-color: var(--bs-secondary);
+    border-radius: 50%;
+    position: absolute;
+    left: -10px; /* Positioniert den Punkt direkt auf der Linie */
+    top: 0;
+}
+
+.career-title {
+    color: var(--bs-light);
+    margin-left: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.career-date {
+    font-size: 16px;
+    color: var(--bs-light);
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+.career-company {
+    color: var(--bs-light);
+    font-size: 18px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+
+
+.career-item {
+    display: none;
+    color: #5d6d7e;
+    padding-top: 5px;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.timeline-point:hover .career-item {
+    display: block;
+}
+.projectsContainer {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.project {
+    position: relative;
+    overflow: hidden; /* Verhindert, dass das Bild über den Container hinausgeht */
+    border-radius: 10px; /* Abgerundete Ecken */
+    width: 30em; /* Volle Breite des Containers */
+    height: 20em; /* Feste Höhe für die Projekte */
+}
+
+.project img {
+    width: 100%; /* Passt die Breite des Bildes an */
+    height: 100%; /* Passt die Höhe des Bildes an */
+    object-fit: cover; /* Bild wird zugeschnitten, um den Container auszufüllen */
+    transition: transform 0.3s ease; /* Sanfte Zoom-Animation */
+    scale: 1.1;
+}
+
+.project:hover img {
+    transform: scale(1.1); /* Bild wird beim Hover leicht vergrößert */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Halbtransparenter Overlay-Effekt */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Unsichtbar bis Hover */
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .overlay {
+    opacity: 1; /* Overlay erscheint beim Hover */
+}
+
+.projectHeading {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.social-icon {
+    margin-top: 1em;
+}
+
+
+
