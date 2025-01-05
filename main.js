@@ -68,5 +68,15 @@ document.getElementById("scrollButton").addEventListener("click", function () {
     }
   }
 });
+window.addEventListener("scroll", function () {
+    const sections = document.querySelectorAll(".fullscreen-div");
+    const lastSection = sections[sections.length - 1];
+    const scrollPosition = window.scrollY + window.innerHeight; // Position des unteren Rands des Bildschirms
 
+    const button = document.getElementById("scrollButton");
+    if (scrollPosition >= lastSection.offsetTop + lastSection.offsetHeight) {
+        // Der Benutzer ist auf der letzten Seite
+        button.style.display = "none";  // Button ausblenden
+    }
+});
 }

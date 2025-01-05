@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
             <!-- Logo links -->
             <a class="navbar-brand" href="#">VB</a>
@@ -60,7 +60,7 @@
     <div id="about" class="cdark fullscreen-div">
         <div class="container">
             <div class="d-flex flex-column aboutMeTop flex-md-row">
-                <img id="aboutMePicture" src="media/me.png" alt="Picture of me" height="400">
+                <img id="aboutMePicture" src="media/me.png" alt="Picture of me" height="400" width="auto">
                 <div class="d-flex flex-column">
                     <h3>Get to know me</h3>
                     <h2>About me</h2>
@@ -72,7 +72,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="d-flex flex-direction-row aboutMeContainer justify-content-between">
+            <div class="d-flex flex-column flex-md-row aboutMeContainer ">
                 <div class="aboutMeItem">
                     <img src="media/fh.png" alt="Beschreibung des Bildes" class="img-fluid" width="80" height="80">
                     <p class="text-center">FH Campus 02 </br> Business Software Development</p>
@@ -92,7 +92,7 @@
         <div class="container">
             <h1 class="skillsHeading text-center ">Skills</h1>
             <div class="row">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 mb-5">
                     <h2>Programming Languages</h2>
                     <div class="skill">
                         <p>Java</p>
@@ -145,6 +145,26 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="d-flex miniSkills">
+                <div class="miniSkill">
+                    <p>Git</p>
+                </div>
+                <div class="miniSkill">
+                    <p>Adobe</br>XD</p>
+                </div>
+                <div class="miniSkill">
+                    <p>Adobe</br>Premiere</p>
+                </div>
+                <div class="miniSkill">
+                    <p>Adobe</br>InDesign</p>
+                </div>
+                <div class="miniSkill">
+                    <p>HTML</p>
+                </div>
+                <div class="miniSkill">
+                    <p>CSS</p>
                 </div>
             </div>
         </div>
@@ -219,19 +239,24 @@
                 <div class="project">
                         <img src="media/pro1.jpg" alt="Project 1">
                         <div class="overlay">
-                            <p class="projectHeading">Menschengespräche.com</p>
+                            <p class="projectHeading"><a href="https://www.menschengespräche.com">Menschengespräche.com</a></p>
+                            <p class="projectDescription">
+                                For my diploma project, I developed the website for Menschengespräche.com from scratch using HTML, CSS, and JavaScript. I created a new color design and visual concept for the site, building a modern identity for a new company.
+                            </p>
                         </div>
                 </div>
                 <div class="project">
                     <img src="media/pro2.png" alt="Project 1">
                     <div class="overlay">
-                        <p class="projectHeading">ISupervision</p>
+                        <p class="projectHeading"><a href="https://github.com/vibi004/FH">ISupervision</a></p>
+                        <p class="projectDescription">My first comprehensive Java project, featuring a graphical user interface (GUI). It manages university assignments for students and professors, including a user management system. This project was created as a university exercise.</p>
                     </div>
                 </div>
                 <div class="project">
-                    <img src="media/pro2.png" alt="Project 1">
+                    <img src="media/pro3.png" alt="Project 1">
                     <div class="overlay">
-                        <p class="projectHeading">ISupervision</p>
+                        <p class="projectHeading">Hangmen</p>
+                        <p class="projectDescription">Hangmen is a console-based game developed as a university exercise. It was created to practice working with classes and other fundamental programming concepts.</p>
                     </div>
                 </div>
             </div>
@@ -272,11 +297,7 @@
             </div>
         </div>
     </div>
-    <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ACQlYa3D5WsSKDnNOFml4AJ7S6AXNISGmWzVr4b6MbBjq4+gZRUknbcW+75yEgvT"
-            crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

@@ -13,6 +13,12 @@ h1 {
 
 }
 
+/* Schriftfarbe für die Links im mobilen Menü */
+.navbar-nav .nav-link {
+    color: white !important; /* Weiße Schriftfarbe für Links im Menü */
+}
+
+
 #name {
     font-size: 3.5rem;
     font-weight: 800;
@@ -35,7 +41,7 @@ h3 {
 }
 body {
   color: var(--bs-light);
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
@@ -93,7 +99,10 @@ p {
 }
 .aboutMeContainer{
     margin-top: 5em;
+    justify-content: space-between;
     width: 100%;
+    padding-bottom: 2em;
+    gap: 2em;
 }
 li {
     font-size: 1.2rem;
@@ -109,6 +118,7 @@ li {
     border-radius: 10px;
 }
 .aboutMeItem p {
+    text-align: center;
     margin-top: 0.5em;
 }
 #aboutMePicture{
@@ -125,6 +135,7 @@ li {
   border-color: var(--bs-secondary);
 }
 
+
 /* Beispiel für Hover-Effekte */
 .button-highlight:hover {
   background-color: var(--bs-highlight);
@@ -139,7 +150,26 @@ li {
   margin-bottom: 5px;
   color: var(--bs-light);
 }
-
+.miniSkills{
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding-bottom: 2em;
+}
+.miniSkill{
+    background-color: var(--bs-dark);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 8em;
+    height: 8em;
+}
+.miniSkill p {
+    font-size: 1rem;
+}
 .progress-bar {
   position: relative;
   width: 90%;
@@ -261,7 +291,7 @@ li {
     align-items: flex-start;
     position: relative;
     margin-bottom: 50px;
-    width: max-content;
+
 }
 .timeline-point-right {
     display: flex;
@@ -269,7 +299,7 @@ li {
     align-items: flex-start;
     position: relative;
     margin-bottom: 50px;
-    width: max-content;
+
 }
 .timelinecircle {
     width: 20px;
@@ -300,15 +330,6 @@ li {
     margin-bottom: 5px;
 }
 
-
-.career-item {
-    display: none;
-    color: #5d6d7e;
-    padding-top: 5px;
-    margin-top: 10px;
-    width: 200px;
-}
-
 .timeline-point:hover .career-item {
     display: block;
 }
@@ -316,6 +337,7 @@ li {
     width: 100%;
     flex-wrap: wrap;
     gap: 2em;
+    padding-bottom: 2em;
 }
 .project {
     position: relative;
@@ -324,7 +346,9 @@ li {
     width: 30em; /* Volle Breite des Containers */
     height: 20em; /* Feste Höhe für die Projekte */
 }
-
+.project a {
+    color: var(--bs-primary);
+}
 .project img {
     width: 100%; /* Passt die Breite des Bildes an */
     height: 100%; /* Passt die Höhe des Bildes an */
@@ -343,11 +367,13 @@ li {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Halbtransparenter Overlay-Effekt */
-    color: white;
+    background-color: rgba(49, 58, 74, 0.9); /* Halbtransparenter Overlay-Effekt */
+    color: var(--bs-light);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 1em;
     opacity: 0; /* Unsichtbar bis Hover */
     transition: opacity 0.3s ease;
 }
@@ -357,13 +383,53 @@ li {
 }
 
 .projectHeading {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-align: center;
+}
+.projectDescription {
+    font-size: 1.2rem;
 }
 
 .social-icon {
     margin-top: 1em;
 }
 
+@media (max-width: 768px) {
+  #aboutMePicture {
+    height: 150px;
+    object-fit: cover;
+
+  }
+  .aboutMeContainer{
+    align-items: center;
+    gap: 2em;
+    margin-botton: 2em;
+  }
+  .aboutMeItem{
+      height: 12em;
+      width: 15em;
+
+  }
+  p {
+    font-size: 1rem;
+  }
+  .project {
+      width: 15em; /* Volle Breite des Containers */
+      height: 15em; /* Feste Höhe für die Projekte */
+  }
+
+  .project:last-child {
+    margin-bottom: 2em;
+  }
+  .aboutMeItem:last-child{
+    margin-bottom: 2em;
+  }
+  .progress-bar{
+    width: 70%;
+  }
+  .scroll-button {
+    display: none;
+  }
+}
 
 
