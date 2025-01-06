@@ -186,6 +186,8 @@ li {
   background-color: var(--bs-secondary); /* Primary color */
   border-radius: 5px;
   transition: width 1s ease-out;
+
+
 }
 
 .progress-fill .circle {
@@ -414,8 +416,8 @@ li {
     font-size: 1rem;
   }
   .project {
-      width: 15em; /* Volle Breite des Containers */
-      height: 15em; /* Feste Höhe für die Projekte */
+      width: 18em; /* Volle Breite des Containers */
+      height: 21em; /* Feste Höhe für die Projekte */
   }
 
   .project:last-child {
@@ -429,6 +431,18 @@ li {
   }
   .scroll-button {
     display: none;
+  }
+  .centercenter {
+    margin-bottom: 2em;
+  }
+  .miniSkills{
+    justify-content: space-around;
+  }
+  .getToKnowMe{
+    margin-top: 1em;
+  }
+  li {
+      font-size: 1rem;
   }
 }
 
